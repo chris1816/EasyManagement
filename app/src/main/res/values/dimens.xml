@@ -3,4 +3,7 @@
 
     <dimen name="dialogFragmentWidth">300dp</dimen>
     <dimen name="dialogFragmentHeight">200dp</dimen>
+
+    <dimen name="splashFontSize">25dp</dimen>
+
 </resources>
