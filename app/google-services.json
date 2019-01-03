@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "764698644037",
+    "firebase_url": "https://easymanagement.firebaseio.com",
+    "project_id": "easymanagement",
+    "storage_bucket": "easymanagement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764698644037:android:06d9808eb9b1482e",
+        "android_client_info": {
+          "package_name": "com.example.cln62.easymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764698644037-q3hdg627ski9hde3sbshqpgh28vc80vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcHmrc-8T9ctxTvPER3ihiKdeovykj4gc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
