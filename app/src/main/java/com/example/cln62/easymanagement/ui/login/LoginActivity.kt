@@ -9,6 +9,7 @@ import com.example.cln62.easymanagement.R
 import com.example.cln62.easymanagement.data.IDataManager
 import com.example.cln62.easymanagement.data.pojo.LoginInfo
 import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
+import com.example.cln62.easymanagement.ui.signup.SignupActivity
 import com.example.cln62.easymanagement.viewmodel.AuthenticationViewModel
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.content_login.*
@@ -17,7 +18,6 @@ import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
 
-//    val viewModel = AuthenticationViewModel()
     @Inject
     internal lateinit var authenticationViewModel: AuthenticationViewModel
 
@@ -45,6 +45,12 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
 
         btn_login.setOnClickListener {
             getUserInput()
+        }
+
+        tv_gotoSignup.setOnClickListener {
+//            val intent:Intent = Intent(Signu)
+            intent = Intent(this@LoginActivity, SignupActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -53,4 +53,13 @@
             android:textAllCaps="false"
             android:text="@string/login" />
 
+    <TextView
+            android:id="@+id/tv_gotoSignup"
+            android:text="@string/need_an_account_sign_up"
+            android:textSize="@dimen/goToSignup"
+            android:textColor="@color/colorSignup"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
 </LinearLayout>
