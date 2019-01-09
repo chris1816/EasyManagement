@@ -6,6 +6,7 @@ import com.example.cln62.easymanagement.R
 
 class MainActivity : AppCompatActivity() {
 
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
