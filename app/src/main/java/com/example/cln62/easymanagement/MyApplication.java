@@ -6,6 +6,7 @@ import com.example.cln62.easymanagement.di.component.DaggerAppComponent;
 import com.example.cln62.easymanagement.di.module.AppModule;
 
 public class MyApplication extends Application {
+    //test
 
     AppComponent myAppComponent;
 
