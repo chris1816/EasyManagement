@@ -2,7 +2,13 @@
     <string name="app_name">EasyManagement</string>
     <string name="welcome">Welcome</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="login">LogIn</string>
     <string name="easymanagement">EasyManagement</string>
+    <string name="need_an_account_sign_up">Need an account? Sign up!</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="mobile">Mobile</string>
+    <string name="compsize">Company Size</string>
+    <string name="role">Role</string>
+    <string name="password">Password</string>
 </resources>

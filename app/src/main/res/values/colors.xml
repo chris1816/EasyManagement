@@ -6,4 +6,6 @@
 
     <color name="login">#c6ffaa00</color>
     <color name="spinner">#d6e1c0</color>
+
+    <color name="colorSignup">#9d002aff</color>
 </resources>

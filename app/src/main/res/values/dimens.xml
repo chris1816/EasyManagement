@@ -6,4 +6,10 @@
 
     <dimen name="splashFontSize">25dp</dimen>
 
+    <dimen name="goToSignup">15dp</dimen>
+
+    <dimen name="signupMargin">50dp</dimen>
+
+
+
 </resources>

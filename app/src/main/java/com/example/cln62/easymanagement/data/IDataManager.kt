@@ -9,4 +9,8 @@ interface IDataManager: INetworkHelper {
         fun getUserInfo(result: LoginUserInfo)
         fun errorMsg(msg:String)
     }
+
+    interface OnSignupListener{
+        fun isSignuped(boolean: Boolean)
+    }
 }
