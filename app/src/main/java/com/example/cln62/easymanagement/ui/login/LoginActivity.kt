@@ -4,11 +4,14 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.cln62.easymanagement.BuildConfig
 import com.example.cln62.easymanagement.MyApplication
 import com.example.cln62.easymanagement.R
+import com.example.cln62.easymanagement.constants.GeneralConstants
 import com.example.cln62.easymanagement.data.IDataManager
-import com.example.cln62.easymanagement.data.pojo.LoginInfo
-import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
+import com.example.cln62.easymanagement.data.model.LoginInfo
+import com.example.cln62.easymanagement.data.model.LoginUserInfo
+import com.example.cln62.easymanagement.ui.main.MainActivity
 import com.example.cln62.easymanagement.ui.signup.SignupActivity
 import com.example.cln62.easymanagement.viewmodel.AuthenticationViewModel
 import kotlinx.android.synthetic.main.activity_login.*
@@ -27,6 +30,25 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
         bundle.putParcelable("userInfo", userInfo)
         val role = userInfo.userrole
 
+        if (BuildConfig.FLAVOR.equals("manager")) {
+/*            if(role =="admin"){
+                intent = Intent(this@LoginActivity, MainActivity::class.java)
+                startActivity(intent, bundle)
+            }else{
+                toast("This is not a Manager Account, please log in with manager email")
+            }*/
+
+            toast("This is not a Manager Account, please log in with manager email")
+
+        } else if (BuildConfig.FLAVOR.equals("developer")) {
+/*            if(role == "user"){
+                intent = Intent(this@LoginActivity, MainActivity::class.java)
+                startActivity(intent, bundle)
+            }else{
+                toast("This is not a Developer Account, please log in with developer email")
+            }*/
+            toast("This is not a Developer Account, please log in with developer email")
+        }
     }
 
     override fun errorMsg(msg: String) {

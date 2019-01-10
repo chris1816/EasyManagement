@@ -1,9 +1,8 @@
-package com.example.cln62.easymanagement.data.network
+package com.example.cln62.easymanagement.network
 
-import android.util.Log
 import com.example.cln62.easymanagement.data.IDataManager
-import com.example.cln62.easymanagement.data.pojo.LoginInfo
-import com.example.cln62.easymanagement.data.pojo.SignupInfo
+import com.example.cln62.easymanagement.data.model.LoginInfo
+import com.example.cln62.easymanagement.data.model.SignupInfo
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -50,10 +49,10 @@ class NetworkHelper : INetworkHelper {
         ).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ result ->
-                LOGIN_TAG.warn { result.msg } //result.msg
+                LOGIN_TAG.warn { "yes" + result.msg } //result.msg
                 listener.getUserInfo(result)
             }, { error ->
-                LOGIN_TAG.warn { error.message }
+                LOGIN_TAG.warn { "no" + error.message }
             })
     }
 
