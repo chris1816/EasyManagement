@@ -1,7 +1,7 @@
 package com.example.cln62.easymanagement.data
 
-import com.example.cln62.easymanagement.data.network.INetworkHelper
-import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
+import com.example.cln62.easymanagement.network.INetworkHelper
+import com.example.cln62.easymanagement.data.model.LoginUserInfo
 
 interface IDataManager: INetworkHelper {
 
