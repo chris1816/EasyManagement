@@ -1,11 +1,12 @@
-package com.example.cln62.easymanagement.data.network
+package com.example.cln62.easymanagement.network
 
-import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
-import com.example.cln62.easymanagement.data.pojo.SuccessMsg
+import com.example.cln62.easymanagement.data.model.LoginUserInfo
+import com.example.cln62.easymanagement.data.model.SuccessMsg
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -21,6 +22,7 @@ interface ApiService {
                 .baseUrl(BASEURL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(ScalarsConverterFactory.create())
                 .build()
             return retrofit.create(ApiService::class.java)
         }
