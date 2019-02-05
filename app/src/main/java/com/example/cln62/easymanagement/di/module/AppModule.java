@@ -8,11 +8,8 @@ import dagger.Provides;
 
 import javax.inject.Singleton;
 
-/*
 @Module
-*/
 public class AppModule {
-/*
     @Singleton
     @Provides
     public AuthenticationViewModel getAuthViewModel() {
@@ -23,6 +20,6 @@ public class AppModule {
     @Provides
     public IDataManager getDataManager() {
         return new DataManager();
-    }*/
+    }
 
 }

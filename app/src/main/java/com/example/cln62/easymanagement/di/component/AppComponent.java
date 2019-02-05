@@ -8,12 +8,12 @@ import dagger.Component;
 
 import javax.inject.Singleton;
 
-/*@Singleton
-@Component(modules = {AppModule.class})*/
+@Singleton
+@Component(modules = {AppModule.class})
 public interface AppComponent {
 
-/*    void injectAuthViewModel(LoginActivity loginActivity);
+    void injectAuthViewModel(LoginActivity loginActivity);
 
-    void injectDataManager(AuthenticationViewModel authenticationViewModel);*/
+    void injectDataManager(AuthenticationViewModel authenticationViewModel);
 
 }
