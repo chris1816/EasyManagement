@@ -70,6 +70,7 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
         }
 
         tv_gotoSignup.setOnClickListener {
+//            val intent:Intent = Intent(Signu)
             intent = Intent(this@LoginActivity, SignupActivity::class.java)
             startActivity(intent)
         }
