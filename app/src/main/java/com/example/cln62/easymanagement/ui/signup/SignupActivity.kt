@@ -6,7 +6,7 @@ import android.util.Log
 import com.example.cln62.easymanagement.R
 import com.example.cln62.easymanagement.data.DataManager
 import com.example.cln62.easymanagement.data.IDataManager
-import com.example.cln62.easymanagement.data.model.SignupInfo
+import com.example.cln62.easymanagement.data.pojo.SignupInfo
 import kotlinx.android.synthetic.main.activity_signup.*
 import org.jetbrains.anko.toast
 
