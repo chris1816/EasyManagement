@@ -11,6 +11,7 @@ import com.example.cln62.easymanagement.constants.GeneralConstants
 import com.example.cln62.easymanagement.data.IDataManager
 import com.example.cln62.easymanagement.data.pojo.LoginInfo
 import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
+import com.example.cln62.easymanagement.ui.main.Main2Activity
 import com.example.cln62.easymanagement.ui.main.MainActivity
 import com.example.cln62.easymanagement.ui.signup.SignupActivity
 import com.example.cln62.easymanagement.viewmodel.AuthenticationViewModel
@@ -31,23 +32,22 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
         val role = userInfo.userrole
 
         if (BuildConfig.FLAVOR.equals("manager")) {
-/*            if(role =="admin"){
+            if (role == "admin") {
                 intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent, bundle)
-            }else{
+            } else {
                 toast("This is not a Manager Account, please log in with manager email")
-            }*/
+            }
 
             toast("This is not a Manager Account, please log in with manager email")
 
         } else if (BuildConfig.FLAVOR.equals("developer")) {
-/*            if(role == "user"){
+            if (role == "user") {
                 intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent, bundle)
-            }else{
+            } else {
                 toast("This is not a Developer Account, please log in with developer email")
-            }*/
-            toast("This is not a Developer Account, please log in with developer email")
+            }
         }
     }
 
@@ -70,7 +70,7 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
         }
 
         tv_gotoSignup.setOnClickListener {
-//            val intent:Intent = Intent(Signu)
+            //            val intent:Intent = Intent(Signu)
             intent = Intent(this@LoginActivity, SignupActivity::class.java)
             startActivity(intent)
         }

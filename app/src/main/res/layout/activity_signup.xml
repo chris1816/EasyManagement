@@ -39,11 +39,16 @@
             android:hint="@string/compsize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    <EditText
-            android:id="@+id/et_registerRole"
-            android:hint="@string/role"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/sp_add_employee"
+        android:autofillHints="Select your role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal">
+    </Spinner>
 
     <Button
             android:id="@+id/bt_register"
