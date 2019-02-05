@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import com.example.cln62.easymanagement.R
+//import com.example.cln62.easymanagement.R
 import com.example.cln62.easymanagement.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 

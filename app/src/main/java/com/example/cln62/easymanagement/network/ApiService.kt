@@ -1,7 +1,7 @@
 package com.example.cln62.easymanagement.network
 
-import com.example.cln62.easymanagement.data.model.LoginUserInfo
-import com.example.cln62.easymanagement.data.model.SuccessMsg
+import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
+import com.example.cln62.easymanagement.data.pojo.SuccessMsg
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

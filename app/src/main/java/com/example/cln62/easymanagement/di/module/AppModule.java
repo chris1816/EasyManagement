@@ -10,7 +10,6 @@ import javax.inject.Singleton;
 
 @Module
 public class AppModule {
-
     @Singleton
     @Provides
     public AuthenticationViewModel getAuthViewModel() {

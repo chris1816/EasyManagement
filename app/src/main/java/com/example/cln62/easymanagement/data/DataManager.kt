@@ -1,11 +1,11 @@
 package com.example.cln62.easymanagement.data
 
 import com.example.cln62.easymanagement.network.NetworkHelper
-import com.example.cln62.easymanagement.data.model.LoginInfo
-import com.example.cln62.easymanagement.data.model.SignupInfo
+
+import com.example.cln62.easymanagement.data.pojo.LoginInfo
+import com.example.cln62.easymanagement.data.pojo.SignupInfo
 
 class DataManager:IDataManager {
-
     companion object {
         val iNetworkHelper = NetworkHelper()
     }

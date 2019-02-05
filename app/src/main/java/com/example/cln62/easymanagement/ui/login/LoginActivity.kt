@@ -9,8 +9,8 @@ import com.example.cln62.easymanagement.MyApplication
 import com.example.cln62.easymanagement.R
 import com.example.cln62.easymanagement.constants.GeneralConstants
 import com.example.cln62.easymanagement.data.IDataManager
-import com.example.cln62.easymanagement.data.model.LoginInfo
-import com.example.cln62.easymanagement.data.model.LoginUserInfo
+import com.example.cln62.easymanagement.data.pojo.LoginInfo
+import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
 import com.example.cln62.easymanagement.ui.main.MainActivity
 import com.example.cln62.easymanagement.ui.signup.SignupActivity
 import com.example.cln62.easymanagement.viewmodel.AuthenticationViewModel
@@ -77,8 +77,8 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
     }
 
     private fun getUserInput() {
-        var email = et_login_email.text.toString()
-        var password = et_login_pw.text.toString()
+        val email = et_login_email.text.toString()
+        val password = et_login_pw.text.toString()
         val loginInfo = LoginInfo(email = email, password = password)
         authenticationViewModel.login(this, loginInfo)
     }
