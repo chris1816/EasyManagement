@@ -3,6 +3,7 @@ package com.example.cln62.easymanagement.di.component;
 import com.example.cln62.easymanagement.di.module.AppModule;
 import com.example.cln62.easymanagement.ui.base.BaseViewModel;
 import com.example.cln62.easymanagement.ui.login.LoginActivity;
+import com.example.cln62.easymanagement.ui.signup.SignupActivity;
 import com.example.cln62.easymanagement.viewmodel.AuthenticationViewModel;
 import dagger.Component;
 
@@ -13,6 +14,8 @@ import javax.inject.Singleton;
 public interface AppComponent {
 
     void injectAuthViewModel(LoginActivity loginActivity);
+
+    void injectAuthViewModel(SignupActivity signupActivity);
 
     void injectDataManager(AuthenticationViewModel authenticationViewModel);
 

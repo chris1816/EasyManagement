@@ -3,15 +3,12 @@ package com.example.cln62.easymanagement.ui.login
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.cln62.easymanagement.BuildConfig
 import com.example.cln62.easymanagement.MyApplication
 import com.example.cln62.easymanagement.R
-import com.example.cln62.easymanagement.constants.GeneralConstants
 import com.example.cln62.easymanagement.data.IDataManager
 import com.example.cln62.easymanagement.data.pojo.LoginInfo
 import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
-import com.example.cln62.easymanagement.ui.main.Main2Activity
 import com.example.cln62.easymanagement.ui.main.MainActivity
 import com.example.cln62.easymanagement.ui.signup.SignupActivity
 import com.example.cln62.easymanagement.viewmodel.AuthenticationViewModel
@@ -25,11 +22,11 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
     @Inject
     internal lateinit var authenticationViewModel: AuthenticationViewModel
 
-    override fun getUserInfo(userInfo: LoginUserInfo) {
-        toast("Login Success")
+    override fun getUserInfo(result: LoginUserInfo) {
+        val role = result.userrole
+        toast("Login Success， user role $role")
         val bundle = Bundle()
-        bundle.putParcelable("userInfo", userInfo)
-        val role = userInfo.userrole
+        bundle.putParcelable("userInfo", result)
 
         if (BuildConfig.FLAVOR.equals("manager")) {
             if (role == "admin") {
@@ -60,7 +57,7 @@ class LoginActivity : AppCompatActivity(), IDataManager.OnLoginListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 //        (getApplicationContext() as MyApplication).getComponentInstance().injectAuthViewModel(this)
-        (applicationContext as MyApplication).getComponentInstance().injectAuthViewModel(this)
+        (applicationContext as MyApplication).componentInstance.injectAuthViewModel(this)
 
         //synthetic binding
         setSupportActionBar(toolbar)
