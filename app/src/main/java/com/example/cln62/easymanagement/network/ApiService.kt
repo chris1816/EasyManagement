@@ -2,6 +2,7 @@ package com.example.cln62.easymanagement.network
 
 import com.example.cln62.easymanagement.data.pojo.LoginUserInfo
 import com.example.cln62.easymanagement.data.pojo.SuccessMsg
+import com.example.cln62.easymanagement.data.pojo.projectpojo.ProjectList
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -40,5 +41,8 @@ interface ApiService {
                @Query("password") password: String,
                @Query("company_size") company_size: String,
                @Query("your_role") role: String): Observable<SuccessMsg>
+
+    @GET("aamir/pms/android-app/pms_projects.php")
+    fun getProjectList():Observable<ProjectList>
 
 }

@@ -1,6 +1,5 @@
 package com.example.cln62.easymanagement.ui.signup
 
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,6 +15,7 @@ import javax.inject.Inject
 import android.widget.AdapterView
 import android.widget.Spinner
 import android.widget.Toast
+import com.example.cln62.easymanagement.MyApplication
 
 class SignupActivity : AppCompatActivity(), IDataManager.OnSignupListener{
 
@@ -37,6 +37,8 @@ class SignupActivity : AppCompatActivity(), IDataManager.OnSignupListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        (applicationContext as MyApplication).componentInstance.injectAuthViewModel(this)
 
         initSpinner()
 
